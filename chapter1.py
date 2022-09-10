@@ -1,3 +1,6 @@
+from sre_constants import SUCCESS
+
+
 try:
     print("Packages Importing...")
     import cv2
@@ -5,11 +8,15 @@ try:
 except:
     print("Packages cannot imported")
 
+cap = cv2.VideoCapture("Resources/meVid.mp4")
 
-img = cv2.imread("Resources/me.jpg")  
+while True:
+    success, img = cap.read()
+    cv2.imshow("Video",img)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
 
-cv2.imshow("Output",img)
-cv2.waitKey(0) & 0xFF == ord("q")
+
 
  
 
