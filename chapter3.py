@@ -14,6 +14,6 @@ imgCropped = img[0:100, 200:500]
 
 cv2.imshow("image", img)
 cv2.imshow("image Resize", imgResize)
-cv2.imshow("image Cropped", imgCropped)
+cv2.imshow("image Cropped", imgC)
 
 cv2.waitKey(0)
